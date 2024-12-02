@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 2%;
+  padding-left: 15%;
+}
+
+.container h1 {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.container h1 img {
+  width: 60px;
+  margin-right: 8px;
+}
+
+.container button img {
+  width: 25px;
+  margin-right: 8px;
+}
+
+.container button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#9140de, #4a1879);
+  color: white;
+  border-radius: 40px;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  padding: 15px 25px;
+  margin: 30px 0 20px;
+  cursor: pointer;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  min-height: 100px;
+  background: linear-gradient(#9140de, #4a1879);
+  color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.input-box img {
+  width: 25px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}

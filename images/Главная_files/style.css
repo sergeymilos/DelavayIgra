@@ -1,0 +1,68 @@
+main {
+  text-align: center;
+  margin: 2rem;
+}
+
+h1,
+h2 {
+  margin-top: 100px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem;
+}
+
+.image-item {
+  flex: 1; /* Каждый элемент будет занимать равное пространство */
+  margin: 0 1rem; /* Отступы между картинами */
+  max-width: 400px; /* Максимальная ширина для каждого изображения */
+  overflow: hidden; /* Скрыть лишнюю часть изображения, если оно не помещается */
+}
+
+.image-item img {
+  width: 100%; /* Изображение будет занимать всю ширину контейнера */
+  height: 350px; /* Фиксированная высота для всех изображений */
+  object-fit: cover; /* Изображение заполнит контейнер, сохраняя пропорции */
+  border-radius: 8px; /* Закругленные углы изображения */
+}
+
+textarea {
+  width: 80%;
+  height: 200px;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #87ceeb;
+}
+
+footer {
+  background-color: #282c34; /* Темный фон */
+  color: #ffffff; /* Белый текст */
+  padding: 20px; /* Отступы внутри футера */
+  text-align: center; /* Центрирование текста */
+  position: relative; /* Относительное позиционирование */
+  bottom: -100px; /* Расположение внизу страницы */
+  width: 100%; /* Ширина на всю страницу */
+}
+
+footer a {
+  color: #61dafb; /* Цвет ссылки */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}

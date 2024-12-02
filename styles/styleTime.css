@@ -1,0 +1,91 @@
+main {
+  margin-top: 170px;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: 250px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #81c784;
+}
+
+#taskContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task {
+  width: 60%;
+  padding: 1rem;
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.task.overdue {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.task-title {
+  flex: 2;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.timer {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.task button {
+  flex: 0.5;
+  background-color: transparent;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task.overdue button {
+  color: #f44336;
+  border-color: #f44336;
+}
+
+.task button:hover {
+  background-color: #e8f5e9;
+}
