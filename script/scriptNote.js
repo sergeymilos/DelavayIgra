@@ -3,17 +3,35 @@ const createBtn = document.querySelector(".btn");
 
 // Load notes from localStorage
 function showNotes() {
-  const savedNotes = localStorage.getItem("notes");
-  if (savedNotes) {
-    notesContainer.innerHTML = savedNotes;
-    addEventListenersToNotes();
-  }
+  const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+  notesContainer.innerHTML = ""; // Очистка контейнера перед добавлением заметок
+
+  savedNotes.forEach((note) => {
+    const inputBox = document.createElement("p");
+    const img = document.createElement("img");
+
+    inputBox.className = "input-box";
+    inputBox.setAttribute("contenteditable", "true");
+    inputBox.textContent = note.text;
+    img.src = "/images/delete.png";
+    img.className = "delete-icon";
+
+    inputBox.appendChild(img);
+    notesContainer.appendChild(inputBox);
+  });
+
+  addEventListenersToNotes();
 }
 showNotes();
 
 // Update localStorage with the current notes
 function updateStorage() {
-  localStorage.setItem("notes", notesContainer.innerHTML);
+  const notes = Array.from(document.querySelectorAll(".input-box")).map(
+    (note) => ({
+      text: note.textContent, // Текст заметки
+    })
+  );
+  localStorage.setItem("notes", JSON.stringify(notes));
 }
 
 // Add new note
